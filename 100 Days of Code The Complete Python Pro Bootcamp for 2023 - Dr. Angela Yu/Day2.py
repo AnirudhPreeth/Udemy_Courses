@@ -2,5 +2,6 @@
 
 #Data Types, Numbers, Operations, Type Conversion, f-Strings.
 
-#Python Primitive Data Types
+#Python Primitive Data Types.
+
  
