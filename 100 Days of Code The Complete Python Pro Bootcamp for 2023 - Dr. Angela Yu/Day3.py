@@ -218,14 +218,111 @@ else:
 
 #[Interactive Coding Exercise] Pizza Order Practice.
 
-
 print("Welcome to Python Pizza Deliveries!")
 size = input("What size pizza do you want? S, M, or L ")
 add_pepperoni = input("Do you want pepperoni? Y or N ")
 extra_cheese = input("Do you want extra cheese? Y or N ")
-
-
-
+bill = 0
+if size == "S":
+    bill = +15
+elif size == "M":
+    bill = +20
+else:
+    bill = +25
+if add_pepperoni == "Y":
+    if size == "S":
+        bill +=2
+    else:
+        bill+=3
     
+if extra_cheese == "Y":
+    bill+=1
+print(f"Your final bill is: {bill}.")
 
+#The above is my solution to the problem.
+#Answer:
+print("Welcome to Python Pizza Deliveries!")
+size = input("What size pizza do you want? S, M, or L ")
+add_pepperoni = input("Do you want pepperoni? Y or N ")
+extra_cheese = input("Do you want extra cheese? Y or N ")
+bill = 0
+if size == "S":
+    bill = +15
+elif size == "M":
+    bill = +20
+else:
+    bill = +25
+    
+if add_pepperoni == "Y":
+    if size == "S":
+        bill +=2
+    else:
+        bill+=3
+    
+if extra_cheese == "Y":
+    bill+=1
+print(f"Your final bill is: {bill}.")
+
+#Logical Operators.
+
+'''
+Logical Operators. And, Or and Not. 
+A and B. 
+When you combine two different conditions using an And operator, they both have to be true. 
+For the entire line of code. If just one of them is true, say A is true and B is false or vice versa, overall thing is false. 
+C or D.
+Or needs only condition to be true. If one of them is true, they both evaluate to true. 
+Only when both C or D are false does the statement actually become false. 
+not E.
+This basically reverses a condition. 
+If condition is false, it becomes true, if it's true it becomes false.
+'''
+ 
+print("Welcome to the rollercoaster!")
+height = int(input("What is your height in cm? "))
+bill = 0
+if height >= 120:
+    print("You can ride the rollercoaster!")
+    age = int(input("What is your age?"))
+    if age < 12:
+        bill = 5
+        print("Child tickets are $5.")
+    elif age<=18:
+        bill = 7
+        print("Youth tickets are $7.")
+    elif age>=45 and age<=55:
+        bill = 12
+        print("Everything is going to be okay. Have a free ride on us!")       
+    else:
+        bill = 12
+        print("Adult tickets are $12.")   
+    wants_photos = input("Do you want a photo taken? Y or N.")
+    if wants_photos == "Y":
+        bill += 3  
+    print(f"Your final bill will be: ${bill}.")                  
+else: 
+    print("Sorry, you have to grow taller before you can ride!")    
+
+'''
+lower() function. 
+count() function. Count() function is case sensitive. 
+'''
+#[Interactive Coding Exercise] Love Calculator.
+
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+name1lower = name1.lower()
+name2lower = name2.lower()
+true_count1 = name1lower.count('t', 'r', 'u', 'e')
+true_count2 = name2lower.count('t', 'r', 'u', 'e') 
+final_true = true_count1 + true_count2     
+love_count1 = name1lower.count('l', 'o', 'v', 'e')
+love_count2 = name2lower.count('l', 'o', 'v', 'e')
+final_love = love_count1 + love_count2 
+
+
+  
+#The above is my solution to the problem.
+#Answer:
  
