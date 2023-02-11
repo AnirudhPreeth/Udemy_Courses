@@ -37,5 +37,6 @@ Like a treasure map. Instead of values, it's like arrows for the agent.
 Plan is not policy. Their environment is different. 
 
 Markov Decision Process (MDP) ->
-    
+Determinisic Search vs Non-Deterministic Search.      
+
 '''
