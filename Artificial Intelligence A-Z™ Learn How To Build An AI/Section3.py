@@ -38,5 +38,25 @@ Plan is not policy. Their environment is different.
 
 Markov Decision Process (MDP) ->
 Deterministic Search vs Non-Deterministic Search.      
+Deterministic Search means that 100% chance, it will do that option. 
+Non-Deterministic Search means, not fully 100%. Many scenarios. 
+Randomness to it. 
+Markov Process - A stochastic process has the Markov Property if conditional probability distribution of future states of process...
+...(conditional on both past and present states) depends only upon the present state, not on the sequence of events that preceded it. 
+Process with this property is Markov process.
+Only depend on where you are now. Not how you got there. 
+Markov Decision Process (MDPs) - Provide mathematical framework for modelling decision making in situations where outcomes are partly...
+...random and partly under the control of a decision maker. 
+In order to make a decision, it applies the Markov Decision Process. 
+MDP is just an add on to the Bellman Equation. 
+V(s)=max_a(R(s,a)+ γV(s’)) -> 0.8*V(s’1) + 0.1*V(s’2) + 0.1*V(s’3) (example). 
+V(s)=max_a(R(s,a)+ γ Σ_s’ P(s,a,s’)V(s’))
+γV(s’) -> Deterministic Search, you know which state you will get into. 
+γ Σ_s’ P(s,a,s’)V(s’)) -> Non-Deterministic Search, you don't know which state you will get into. 
+V(s)=max_a(R(s,a)+ γ Σ_s’ P(s,a,s’)V(s’)) -> New Bellman Equation. 
+Paper -> A Survey of Applications of Markov Decision Processes - DJ White (1993). 
+
+Policy VS Plan ->
+V(s)=max_a(R(s,a)+ γ Σ_s’ P(s,a,s’)V(s’)) 
 
 '''
