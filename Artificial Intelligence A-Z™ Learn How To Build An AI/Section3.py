@@ -51,6 +51,7 @@ In order to make a decision, it applies the Markov Decision Process.
 MDP is just an add on to the Bellman Equation. 
 V(s)=max_a(R(s,a)+ γV(s’)) -> 0.8*V(s’1) + 0.1*V(s’2) + 0.1*V(s’3) (example). 
 V(s)=max_a(R(s,a)+ γ Σ_s’ P(s,a,s’)V(s’))
+P -> Probability. 
 γV(s’) -> Deterministic Search, you know which state you will get into. 
 γ Σ_s’ P(s,a,s’)V(s’)) -> Non-Deterministic Search, you don't know which state you will get into. 
 V(s)=max_a(R(s,a)+ γ Σ_s’ P(s,a,s’)V(s’)) -> New Bellman Equation. 
@@ -58,5 +59,33 @@ Paper -> A Survey of Applications of Markov Decision Processes - DJ White (1993)
 
 Policy VS Plan ->
 V(s)=max_a(R(s,a)+ γ Σ_s’ P(s,a,s’)V(s’)) 
+Not a full 100% so its not a 1. 
+Some states which may have been equal are now radically different. Due to not a full 100%.
+policy will be defined by a set of pair "state -> action" which should allow from any reachable state.
+plan will be a a strictly defined sequence of actions leading from the initial state to the goal. 
+Can be more complex than that if you have concurrency. 
+Planning involves the unrolling of a policy through time, and refining the policy based on the resulting trajectory . 
+policy is a description of how an agent behaves in an environment and is represented as the probability of performing each action...
+...for a given state.
+
+Adding a "Living Penalty" ->
+Rewards in ever tile. R=-0.04. No matter where he goes he will get negative penalty. Hence, it is living penalty. 
+Even in starting state, there is R=-0.04, but he only gets a reward when he enters the tile. 
+"Optimal Policy". Results will be different as according to the reward value. Depending upon the environment as well. 
+
+Q-Learning Intuition ->
+V(s)=max_a(R(s,a)+ γ Σ_s’ P(s,a,s’)V(s’)) 
+Where's the Q? Q represents quality, quality of the action. Which action is more lucrative? (Because actions lead to states).
+Q(s,a) -> Q is of the state s and action a. We perform action in state s. 
+V(s) ->  maximum of all the possible actions (reward).  
+Q is a recursive function of V. 
+Q(s,a) = R(s,a)+ γ Σ_s’ (P(s,a,s’) V(s’))
+Bellman Equation for Q values - Q(s,a) = R(s,a)+ γ Σ_s’ (P(s,a,s’) max_a Q(s’,a’)) 
+They don't look at the states, they look at the action. 
+
+Temporal Difference ->
+Heart and Soul of Q-Learning Algorithm.  
+Recursion is not deterministic. Subject to chance.
+Q(s,a) = R(s,a)+ γ Σ max_a Q(s’, a’)
 
 '''
