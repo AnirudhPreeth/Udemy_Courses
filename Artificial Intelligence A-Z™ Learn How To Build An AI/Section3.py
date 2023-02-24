@@ -87,5 +87,21 @@ Temporal Difference ->
 Heart and Soul of Q-Learning Algorithm.  
 Recursion is not deterministic. Subject to chance.
 Q(s,a) = R(s,a)+ γ Σ max_a Q(s’, a’)
+Before => Q(s,a), After => R(s,a) +γ max_a Q(s’, a’)
+TD(a,s) = R(s,a)+ γ max_a Q(s’, a’) - Q(s,a)
+Difference is time. 
+Q(s,a) = Q(s,a) + αTD(a,s) 
+Adding time, 
+Q_t-1(s,a) = Q_t-1(s,a) + αTD_t(α,s) - Heart and soul of Q-learning algorithm. 
+Q_t(s,a) = Q_t-1(s,a) + αTD_t(α,s) 
+Q_t(s,a) = Q_t-1(s,a) + α(R(s,a)+ γ max_a’ Q(s’, a’) - Q_t-1(s,a)) - Full Equation. 
+Environment is continuously changing. 
 
+Now let's recap what is going on in terms of MDPs. At every time t:
+1. The AI observes the current state st.
+2. The AI plays the action at.
+3. The AI receives reward rt = R(at, st).
+4. The AI enters the following state st+1.
 '''
+
+#That's the end of this section. 
